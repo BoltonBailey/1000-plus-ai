@@ -2,7 +2,7 @@
 
 > ⚠️ This website/repo was developed from a fork of [the 1000+ theorems project](https://1000-plus.github.io/) using AI to identify additional formalizations. Not all entries may be correct characterizations of the state of formalization of these statements.
 
-The entries of this list are extracted from Wikipedia's [List of theorems](https://en.wikipedia.org/wiki/List_of_theorems) and its sister lists of mathematical statements: [List of lemmas](https://en.wikipedia.org/wiki/List_of_lemmas), [List of conjectures](https://en.wikipedia.org/wiki/List_of_conjectures), [List of inequalities](https://en.wikipedia.org/wiki/List_of_inequalities), [List of mathematical identities](https://en.wikipedia.org/wiki/List_of_mathematical_identities), [List of fundamental theorems](https://en.wikipedia.org/wiki/List_of_fundamental_theorems), [List of misnamed theorems](https://en.wikipedia.org/wiki/List_of_misnamed_theorems), and [List of axioms](https://en.wikipedia.org/wiki/List_of_axioms).
+The entries of this list are extracted from Wikipedia's [List of theorems](https://en.wikipedia.org/wiki/List_of_theorems) and its sister lists of mathematical statements: [List of lemmas](https://en.wikipedia.org/wiki/List_of_lemmas), [List of conjectures](https://en.wikipedia.org/wiki/List_of_conjectures), [List of inequalities](https://en.wikipedia.org/wiki/List_of_inequalities), [List of mathematical identities](https://en.wikipedia.org/wiki/List_of_mathematical_identities), [List of fundamental theorems](https://en.wikipedia.org/wiki/List_of_fundamental_theorems), and [List of misnamed theorems](https://en.wikipedia.org/wiki/List_of_misnamed_theorems).
 
 
 ## Linking to the list

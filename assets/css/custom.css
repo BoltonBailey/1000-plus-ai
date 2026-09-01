@@ -73,3 +73,8 @@ a:hover {
     color: #555;
     margin-top: 18px;
 }
+
+td.msc-col {
+    font-size: 0.85em;
+    color: #444;
+}

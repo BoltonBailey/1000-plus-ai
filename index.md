@@ -35,11 +35,11 @@ layout: plain
 </p>
 
 
-<table class="display datatable" data-order-columns="[1]">
+<table class="display datatable" data-order-columns="[0]">
     <thead>
         <tr>
-            <th class="dt-head-center">MSC</th>
             <th>Name</th>
+            <th title="Mathematics Subject Classification">Subject</th>
             <th class="dt-head-center">Isabelle</th>
             <th class="dt-head-center">HOL Light</th>
             <th class="dt-head-center">Rocq</th>
@@ -64,7 +64,6 @@ layout: plain
               {% if f.status == "statement" %}{% assign stated = true %}{% endif %}
             {% endfor %}
             <tr id="{{ t.wikidata }}" data-stated="{{ stated }}" data-proved="{{ proved }}">
-                <td class="dt-body-center"><span title="{{ site.data.msc[t.msc_classification] }}">{{ t.msc_classification }}</span></td>
                 <td>
                     {% assign wl = t.wikipedia_links.first %}
                     {% if wl contains "|" %}
@@ -77,6 +76,7 @@ layout: plain
                     {% endif %}
                     <a href="https://en.wikipedia.org/wiki/{{ wurl }}" title="Wikidata ID {{ t.wikidata }}">{{ wlabel }}</a>
                 </td>
+                <td class="msc-col">{% if t.msc_classification == "?" %}<span class="unknown" title="MSC classification not yet determined">?</span>{% else %}<span title="MSC {{ t.msc_classification }}">{{ site.data.msc[t.msc_classification] | split: ";" | first | default: t.msc_classification }}</span>{% endif %}</td>
                 <td class="dt-body-center">
                     {% if t.isabelle %}
                         {% for f in t.isabelle %}
