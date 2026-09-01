@@ -1,0 +1,15 @@
+{%- assign f = include.f -%}
+{%- assign libname = "" -%}
+{%- for rule in site.data.libraries -%}
+  {%- if libname == "" and f.url contains rule.match -%}{%- assign libname = rule.name -%}{%- endif -%}
+{%- endfor -%}
+{%- if libname != "" -%}{{- libname -}}
+{%- elsif f.url contains "github.com/" -%}
+  {%- assign repopath = f.url | split: "github.com/" | last | split: "/" -%}
+  {%- if repopath.size > 1 -%}{{- repopath[1] -}}{%- else -%}{{- repopath[0] -}}{%- endif -%}
+{%- elsif f.url contains "gitlab.com/" -%}
+  {%- assign repopath = f.url | split: "gitlab.com/" | last | split: "/" -%}
+  {%- if repopath.size > 1 -%}{{- repopath[1] -}}{%- else -%}{{- repopath[0] -}}{%- endif -%}
+{%- else -%}
+  {{- f.url | split: "//" | last | split: "/" | first -}}
+{%- endif -%}

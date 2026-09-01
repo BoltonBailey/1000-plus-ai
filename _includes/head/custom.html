@@ -25,7 +25,15 @@
 
         let toolbar = document.createElement('div');
         toolbar.innerHTML = '<b>Custom tool bar! Text/images etc.</b>';
+        let currentView = 'all';
+        DataTable.ext.search.push(function (settings, data, dataIndex) {
+            if (currentView === 'all') return true;
+            const tr = settings.aoData[dataIndex].nTr;
+            return tr && tr.dataset[currentView] === 'true';
+        });
+
         let tables = $('table.datatable');
+        let dts = [];
         for (let t of tables) {
             let options = {
                 "order": $(t).data('order-columns').map(n => [n, 'asc']),
@@ -39,12 +47,20 @@
                 options.pageLength = pageLength;
             }
             let dt = new DataTable(t, options);
+            dts.push(dt);
             dt.columns().every(function () {
                 if ($(this.header()).data('hide-column')) {
                     this.visible(false);
                 }
             });
         }
+
+        $(document).on('click', '.view-tab', function () {
+            $('.view-tab').removeClass('active');
+            $(this).addClass('active');
+            currentView = this.dataset.view;
+            dts.forEach(dt => dt.draw());
+        });
     });
 </script>
 <!-- End DataTables stuff -->

@@ -2,6 +2,26 @@
     margin-top: 20px;
 }
 
+.fork-banner {
+    background-color: #fff3cd;
+    border: 1px solid #ffe69c;
+    border-radius: 4px;
+    color: #664d03;
+    padding: 10px 14px;
+    margin: 0 0 16px 0;
+    font-size: 0.85em;
+}
+.fork-banner a {
+    color: inherit;
+    font-weight: bold;
+}
+
+/* statement-only formalizations: letter shown in parentheses, faded */
+a.stmt {
+    opacity: 0.6;
+    font-style: italic;
+}
+
 a {    
     border-bottom: 1px dotted;
     text-decoration: none;
@@ -26,4 +46,30 @@ a:hover {
 .dt-search {
     label, input { display: inline-flex !important; }
     input { width: auto; }
+}
+
+.view-tabs { margin: 0 0 10px 0; }
+.view-tab {
+    background: #f2f2f2;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 5px 12px;
+    margin-right: 6px;
+    font-size: 0.8em;
+    cursor: pointer;
+}
+.view-tab.active {
+    background: #2b6cb0;
+    border-color: #2b6cb0;
+    color: #fff;
+    font-weight: bold;
+}
+
+.unknown { color: #c9c9c9; cursor: default; }
+.notfound { color: #999; cursor: default; letter-spacing: 1px; }
+
+.table-legend {
+    font-size: 0.75em;
+    color: #555;
+    margin-top: 18px;
 }

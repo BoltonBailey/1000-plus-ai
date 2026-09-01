@@ -1,12 +1,12 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 
-title: 1000+ theorems
+title: 1000+ formalizations
 email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Keeping track of formalizations of theorems from the Wikipedia's List of theorems.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://1000-plus.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+  Keeping track of formalizations of theorems, lemmas, conjectures, and other statements from Wikipedia's lists.
+baseurl: "/1000-plus-ai" # the subpath of your site, e.g. /blog
+url: "https://boltonbailey.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 minimal_mistakes_skin: default
 search: false
 
@@ -37,7 +37,7 @@ footer:
   links:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/1000-plus-theorems/1000-plus"
+      url: "https://github.com/BoltonBailey/1000-plus-ai"
 
 defaults:
   # _pages
